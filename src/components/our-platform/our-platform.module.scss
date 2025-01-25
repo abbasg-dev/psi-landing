@@ -1,0 +1,81 @@
+@use "../../styles/abstracts/" as mixins;
+
+.platform {
+  position: relative;
+  min-height: auto;
+  padding: 50px 0;
+
+  .item {
+    width: unset;
+    height: 295px;
+    border-radius: 16px;
+    border: 0.76px solid #aa14f0;
+    background-color: #2f295e;
+    font-family: "Poppins", sans-serif;
+    padding: 30px;
+    justify-content: space-between;
+    position: relative;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+      color: #fff;
+      border-left: 4px solid #33ceff;
+      padding-left: 15px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      color: #e1e1e1;
+    }
+
+    .itemIcon {
+      width: 146px;
+      height: 146px;
+      align-self: self-end;
+    }
+
+    .ellipse1 {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+  }
+}
+
+.platform .platformEllipse1 {
+  position: absolute;
+  height: 311px;
+  left: 0;
+  top: 0;
+  transform: translateY(-20%);
+}
+
+.platform .aboutEllipse {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-45%);
+}
+
+.platform .platformEllipse2 {
+  position: absolute;
+  left: 0;
+  top: 15%;
+  height: 960px;
+  transform: translateY(-50%);
+}
+
+.platform .platformEllipse3 {
+  position: absolute;
+  right: 0;
+  height: 960px;
+  transform: translateY(-75%);
+}

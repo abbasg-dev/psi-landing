@@ -1,0 +1,18 @@
+@use "../abstracts" as abstracts;
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(180deg, #191c4f 100%, rgba(24, 29, 79, 0) 0%);
+  display: block;
+
+  .text-danger {
+    font-size: 12px;
+    margin: 0 15px;
+  }
+
+  .flex-center {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}

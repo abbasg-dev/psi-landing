@@ -1,0 +1,10 @@
+@use "./mixins" as mixins;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

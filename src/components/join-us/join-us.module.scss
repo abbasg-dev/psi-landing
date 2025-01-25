@@ -1,0 +1,43 @@
+@use "../../styles/abstracts/" as mixins;
+
+.joinUs {
+  position: relative;
+  min-height: auto;
+  overflow: hidden;
+  padding: 60px 0;
+
+  &Container {
+    border: 0.76px solid #aa14f0 !important;
+    background-color: #2f295e !important;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 1226px;
+    min-height: auto;
+    padding: 20px 60px;
+    justify-self: center;
+    width: 100%;
+
+    .signup {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+
+    .customGap {
+      gap: 20px;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.joinUsEllipse {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-10%);
+}

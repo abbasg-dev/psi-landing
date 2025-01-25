@@ -1,0 +1,18 @@
+.input-group {
+  background-color: #443f6e !important;
+  border-radius: 24px;
+  padding: 12px;
+  margin: 12px 0;
+
+  .PhoneInput {
+    input {
+      border: 0;
+      color: #fff;
+      background-color: #443f6e !important;
+
+      &:focus {
+        border: unset;
+      }
+    }
+  }
+}

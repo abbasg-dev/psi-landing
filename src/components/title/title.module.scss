@@ -1,0 +1,21 @@
+.title {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 150px;
+    height: auto;
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 52.5px;
+    letter-spacing: -0.03em;
+    margin: 0;
+    vertical-align: text-top;
+    color: #ffffff;
+    width: max-content;
+  }
+}

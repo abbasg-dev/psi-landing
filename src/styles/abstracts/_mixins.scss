@@ -1,0 +1,54 @@
+@use "sass:math";
+@use "sass:map";
+@use "./variables" as variables;
+
+@mixin flexBox($x, $y) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+}
+
+@mixin position($name, $top, $right, $bottom, $left) {
+  position: $name;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin columns($key) {
+  @for $i from 1 through 12 {
+    .col-#{$key}-#{$i} {
+      flex-basis: math.div(100%, 12) * $i;
+      max-width: math.div(100%, 12) * $i;
+    }
+  }
+}
+
+@mixin responsive($screen) {
+  @if $screen == "lg" {
+    @media (max-width: map.get(variables.$breakPoints, "lg")) {
+      @content;
+    }
+  } @else if $screen == "md" {
+    @media (max-width: map.get(variables.$breakPoints, "md")) {
+      @content;
+    }
+  } @else if $screen == "sm" {
+    @media (max-width: map.get(variables.$breakPoints, "sm")) {
+      @content;
+    }
+  } @else if $screen == "xsm" {
+    @media (max-width: map.get(variables.$breakPoints, "xsm")) {
+      @content;
+    }
+  }
+}
+
+@debug "Responsive Mixin Loaded!";

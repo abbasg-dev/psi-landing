@@ -1,0 +1,37 @@
+@use "../abstracts" as abstracts;
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+.container {
+  width: 100%;
+  max-width: abstracts.$maxWidth;
+  padding-left: abstracts.$gutter;
+  padding-right: abstracts.$gutter;
+  margin-left: auto;
+  margin-right: auto;
+  @include mixins.responsive(sm) {
+    padding-left: abstracts.$gutter + 1rem;
+    padding-right: abstracts.$gutter + 1rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  padding: abstracts.$gutter;
+}
+
+@each $key, $value in variables.$breakPoints {
+  @if $key == xlg {
+    @media (min-width: $value) {
+      @include mixins.columns($key);
+    }
+  } @else {
+    @media (max-width: $value) {
+      @include mixins.columns($key);
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@use "../../styles/abstracts/" as mixins;
+
+.hero {
+  position: relative;
+  height: 120vh;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111011 !important;
+    background: linear-gradient(to bottom, #361b70 20%, #1a1d50 40%);
+    opacity: 0.7;
+    z-index: 1;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .navbar {
+    width: 100% !important;
+    height: 5rem;
+    margin-top: 1.5rem;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbarWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #b09cf7;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 120rem;
+  }
+
+  .navWrapperUl {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+
+  .navbarLink {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    transition: all 0.5s linear;
+    color: #fff;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    max-width: 120rem;
+    width: 100%;
+  }
+
+  .letsTry {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+
+    h1 {
+      line-height: 1.1;
+      font-size: 59px;
+      margin-bottom: unset;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      width: max-content;
+    }
+
+    span {
+      font-size: 95px;
+      line-height: 0.8;
+      font-weight: 900;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+
+  .logo {
+    z-index: 2;
+    position: relative;
+  }
+}

@@ -1,0 +1,19 @@
+@use "../abstracts" as abstracts;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: abstracts.$breakpoint-md) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: abstracts.$breakpoint-sm) {
+  html {
+    font-size: 12px;
+  }
+}

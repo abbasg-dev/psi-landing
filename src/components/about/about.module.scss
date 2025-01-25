@@ -1,0 +1,51 @@
+@use "../../styles/abstracts/" as mixins;
+
+.about {
+  position: relative;
+  background-image: linear-gradient(#6c1769 1px, #a924a400 -1px),
+    linear-gradient(to right, #6c1769 1px, #a924a400 1px);
+  background-size: 120px 120px;
+  min-height: auto;
+  padding: 50px 0;
+  overflow: hidden;
+
+  .aboutWrapper {
+    width: 1240px;
+    min-height: auto;
+    padding: 60px;
+    background-color: #00c5efb5;
+    border-radius: 16px 301.5px 16px 301.5px;
+    color: #ffffff;
+    justify-self: center;
+
+    .info {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    .card1,
+    .card2 {
+      position: absolute;
+      width: 286px;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 16px;
+      background-repeat: no-repeat;
+    }
+
+    .card1 {
+      top: 155px;
+      left: 280px;
+      z-index: 2;
+    }
+
+    .card2 {
+      top: 30px;
+      left: 30px;
+      z-index: 1;
+    }
+  }
+}
