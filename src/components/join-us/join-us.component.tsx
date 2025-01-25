@@ -8,8 +8,14 @@ import Button from "../button/button.component";
 import styles from "./join-us.module.scss";
 import assets from "../../assets";
 
+interface JoinData {
+  firstName?: string;
+  lastName?: string;
+  phone?: string;
+  email?: string;
+}
 const JoinUs = () => {
-  const methods = useForm({
+  const methods = useForm<JoinData>({
     mode: "onChange",
     reValidateMode: "onChange",
     defaultValues: {
@@ -22,7 +28,7 @@ const JoinUs = () => {
 
   const { control, handleSubmit, setValue } = methods;
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: JoinData) => {
     console.log(data);
   };
 
