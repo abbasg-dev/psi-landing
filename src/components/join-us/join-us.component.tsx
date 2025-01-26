@@ -40,7 +40,7 @@ const JoinUs = () => {
   }, [setValue]);
 
   return (
-    <section className={styles.joinUs}>
+    <section className={styles.joinUs} id="contact">
       <div className="container">
         <div className={styles.joinUsContainer}>
           <div

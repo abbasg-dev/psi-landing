@@ -1,7 +1,14 @@
+import { useActiveLink } from "../../context/ActiveLinkContext";
 import styles from "./footer.module.scss";
 import assets from "../../assets";
 
 const Footer = () => {
+  const { activeLink, setActiveLink } = useActiveLink();
+
+  const onUpdateActiveLink = (value: string) => {
+    setActiveLink(value);
+  };
+
   return (
     <footer className={styles.customFooter}>
       <div className="container">
@@ -17,10 +24,20 @@ const Footer = () => {
           </div>
           <div className="col-lg-4 col-md-4 d-flex justify-content-center align-items-center">
             <ul className="flex-center align-items-center">
-              <li>About</li>
-              <li>Features</li>
-              <li>How it Works</li>
-              <li>Contact</li>
+              {["about", "features", "how-it-works", "contact"]?.map(
+                (link, index) => (
+                  <li key={index}>
+                    <a
+                      key={link}
+                      href={`#${link}`}
+                      className={activeLink === link ? styles.active : ""}
+                      onClick={() => onUpdateActiveLink(link)}
+                    >
+                      {link.charAt(0).toUpperCase() + link.slice(1)}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
           <div className="col-lg-4 col-md-4 d-flex justify-content-center align-items-center">

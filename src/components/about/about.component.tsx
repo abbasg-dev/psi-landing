@@ -6,7 +6,7 @@ import styles from "./about.module.scss";
 
 const About = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <div className="container">
         <div className={styles.aboutWrapper}>
           <Row>

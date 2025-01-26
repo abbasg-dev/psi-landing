@@ -24,7 +24,7 @@ const Journey = () => {
     },
   ];
   return (
-    <section className={styles.journey}>
+    <section className={styles.journey} id="how-it-works">
       <div className="d-flex justify-content-center align-items-center">
         <Title title={"Your Journey in the Metaverse: Step by Step"} />
       </div>

@@ -15,13 +15,20 @@
     padding: 0;
 
     li {
-      cursor: pointer;
-      width: max-content;
-
-      &:hover {
+      a {
         color: #ffffff;
-        transform: scale(1.05);
-        transition: transform 0.3s ease;
+        cursor: pointer;
+        width: max-content;
+        text-decoration: none;
+        &:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s ease;
+        }
+        &.active {
+          color: #2f295e;
+          font-weight: bold;
+          text-decoration: none;
+        }
       }
     }
   }

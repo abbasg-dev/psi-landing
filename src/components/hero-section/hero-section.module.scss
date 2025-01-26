@@ -75,6 +75,12 @@
     padding-right: 1.5rem;
     transition: all 0.5s linear;
     color: #fff;
+
+    &.active {
+      color: #0794c1 !important;
+      font-weight: bold;
+      text-decoration: none;
+    }
   }
 
   .row {

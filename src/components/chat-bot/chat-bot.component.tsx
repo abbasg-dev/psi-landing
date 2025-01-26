@@ -44,9 +44,7 @@ class ActionProvider {
   }
 
   handleHello = () => {
-    const message = this.createChatbotMessage(
-      "Hello, I'm Maher! How can I help?"
-    );
+    const message = this.createChatbotMessage("Hello, Need help?");
     this.setState((prevState: any) => ({
       ...prevState,
       messages: [...prevState.messages, message],

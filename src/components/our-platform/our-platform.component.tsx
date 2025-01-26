@@ -31,7 +31,7 @@ const OurPlatform = () => {
     },
   ];
   return (
-    <section className={styles.platform}>
+    <section className={styles.platform} id="features">
       <div className="d-flex justify-content-center align-items-center">
         <Title title="Why Choose Our Platform?" />
       </div>

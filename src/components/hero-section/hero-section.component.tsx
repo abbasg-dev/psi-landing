@@ -1,18 +1,18 @@
-import { useState } from "react";
 import { Navbar, Nav, Row, Col } from "react-bootstrap";
 import assets from "../../assets";
 import Button from "../button/button.component";
+import { useActiveLink } from "../../context/ActiveLinkContext";
 import styles from "./hero-section.module.scss";
 
 const Hero = () => {
-  const [activeLink, setActiveLink] = useState("home");
+  const { activeLink, setActiveLink } = useActiveLink();
 
   const onUpdateActiveLink = (value: string) => {
     setActiveLink(value);
   };
 
   return (
-    <header className={styles.hero}>
+    <header className={styles.hero} id="home">
       <div className="container">
         <Navbar expand="md" className={styles.navbar}>
           <div className={styles.navbarWrapper}>
@@ -31,7 +31,7 @@ const Hero = () => {
                       href={`#${link}`}
                       className={
                         activeLink === link
-                          ? `active ${styles.navbarLink}`
+                          ? `${styles.navbarLink} ${styles.active}`
                           : styles.navbarLink
                       }
                       onClick={() => onUpdateActiveLink(link)}

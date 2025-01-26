@@ -53,6 +53,10 @@
   border-radius: 10px;
   padding: 0.8rem;
   background-color: transparent;
+
+  &:before {
+    background: unset;
+  }
 }
 
 .react-chatbot-kit-user-chat-message,
