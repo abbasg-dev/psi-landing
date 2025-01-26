@@ -3,7 +3,7 @@ import Chatbot, { createChatBotMessage } from "react-chatbot-kit";
 import "react-chatbot-kit/build/main.css";
 import { DeviceFrameset } from "react-device-frameset";
 import "react-device-frameset/styles/marvel-devices.min.css";
-import assets from "../../assets";
+// import assets from "../../assets";
 import styles from "./chat-bot.module.scss";
 import "./bot.scss";
 
@@ -66,7 +66,7 @@ const ChatBotModal = (props: Props) => {
       size="lg"
       dialogClassName="modal-100w"
     >
-      <DeviceFrameset device="MacBook Pro" color="gold" landscape>
+      <DeviceFrameset device="MacBook Pro" color="gold">
         <div className="d-flex justify-content-between align-items-center mx-4 my-3"></div>
         <div className="mx-4">
           <Modal.Body className="px-0 py-0">
