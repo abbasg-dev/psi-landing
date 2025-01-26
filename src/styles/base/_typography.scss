@@ -4,6 +4,7 @@ body {
   font-family: "Arial", sans-serif;
   background: linear-gradient(180deg, #191c4f 100%, rgba(24, 29, 79, 0) 0%);
   display: block;
+  cursor: url("/src/assets/images/cursor.svg") 16 16, auto;
 
   .text-danger {
     font-size: 12px;

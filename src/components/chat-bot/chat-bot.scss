@@ -5,7 +5,7 @@
 }
 
 .chatbotModalClose {
-  cursor: pointer;
+  cursor: url("/src/assets/images/cursor.svg") 16 16, auto;
 }
 
 .marvel-device.macbook {
@@ -19,7 +19,7 @@
   border: 1px solid #272962 !important;
   font-weight: 500;
   font-size: 16px;
-  cursor: pointer;
+  cursor: url("/src/assets/images/cursor.svg") 16 16, auto;
   font-family: "Inter", sans-serif;
   height: 48px;
 

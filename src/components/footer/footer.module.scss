@@ -17,7 +17,7 @@
     li {
       a {
         color: #ffffff;
-        cursor: pointer;
+        cursor: url("/src/assets/images/cursor.svg") 16 16, auto;
         width: max-content;
         text-decoration: none;
         &:hover {
