@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useMediaQuery } from "react-responsive";
 import Hero from "./components/hero-section/hero-section.component";
 import WhyMetaverse from "./components/why-metaverse/why-metaverse.component";
 import About from "./components/about/about.component";

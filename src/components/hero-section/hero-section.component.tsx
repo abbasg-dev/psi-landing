@@ -11,7 +11,7 @@ const Hero = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const { activeLink, setActiveLink } = useActiveLink();
   const [isToggleOpen, setIsToggleOpen] = useState<boolean>(false);
-  const [showChatBot, setShowChatBot] = useState<boolean>(false);
+  // const [showChatBot, setShowChatBot] = useState<boolean>(false);
 
   const onUpdateActiveLink = (value: string) => {
     setActiveLink(value);
@@ -120,7 +120,7 @@ const Hero = () => {
             <div className={styles.visit}>
               <button
                 className={styles.help}
-                onClick={() => setShowChatBot(true)}
+                // onClick={() => setShowChatBot(true)}
               >
                 Hello ! Need help ?
               </button>
