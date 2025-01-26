@@ -5,12 +5,21 @@ type buttonProps = {
   text?: string;
   altText?: string;
   click?: () => void;
+  btnClass?: string;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 };
 
 const Button = (props: buttonProps) => {
-  const { imgSrc, text, altText, click } = props;
+  const { imgSrc, text, altText, click, btnClass, onMouseEnter, onMouseLeave } =
+    props;
   return (
-    <button onClick={click}>
+    <button
+      onClick={click}
+      className={btnClass}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       {imgSrc && <img src={imgSrc} alt={altText} />}
       <span>{text}</span>
     </button>

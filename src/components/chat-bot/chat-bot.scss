@@ -1,0 +1,44 @@
+.chatbot-modal .modal-content {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 35px !important;
+}
+
+.chatbotModalClose {
+  cursor: pointer;
+}
+
+.marvel-device.macbook {
+  right: 15%;
+}
+
+.close-chat-btn {
+  background-color: transparent;
+  border-radius: 24px !important;
+  color: #272962;
+  border: 1px solid #272962 !important;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  height: 48px;
+
+  &:hover {
+    color: #fff;
+    border: 1px solid #fff !important;
+  }
+}
+
+.status {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+}

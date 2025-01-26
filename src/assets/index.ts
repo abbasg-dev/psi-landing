@@ -58,6 +58,10 @@ import startEllipse from "./images/start-ellipse.svg";
 import animatedLogo from "./images/logo-animated.svg";
 import loading from "./videos/loading.mp4";
 import lap from "./images/lap.png";
+import userProfile from "./images/user-profile.jpeg";
+import botProfile from "./images/psi-profile.jpeg";
+import status from "./images/status.svg";
+import chatPlaceholder from "./images/chat-placeholder.svg";
 
 const assets = {
   layer,
@@ -120,6 +124,10 @@ const assets = {
   animatedLogo,
   loading,
   lap,
+  userProfile,
+  botProfile,
+  status,
+  chatPlaceholder,
 };
 
 export default assets;
