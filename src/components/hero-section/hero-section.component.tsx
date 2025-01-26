@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 import { Navbar, Nav, Row, Col } from "react-bootstrap";
 import assets from "../../assets";
 import Button from "../button/button.component";
-import ChatBotModal from "../chat-bot/chat-bot.component";
+// import ChatBotModal from "../chat-bot/chat-bot.component";
 import { useActiveLink } from "../../context/ActiveLinkContext";
 import styles from "./hero-section.module.scss";
 
