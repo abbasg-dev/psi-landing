@@ -28,6 +28,10 @@
       height: auto;
       bottom: 0;
       cursor: url("/src/assets/images/cursor.svg") 16 16, auto;
+
+      @include mixins.responsive(md) {
+        display: none;
+      }
     }
 
     .whyQ {

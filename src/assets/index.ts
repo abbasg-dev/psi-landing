@@ -62,6 +62,11 @@ import userProfile from "./images/user-profile.jpeg";
 import botProfile from "./images/psi-profile.jpeg";
 import status from "./images/status.svg";
 import chatPlaceholder from "./images/chat-placeholder.svg";
+import menu from "./images/menu.svg";
+import clientSelected from "./images/client-selected.svg";
+import heroEllipse from "./images/hero-ellipse.svg";
+import heroEllipseBck from "./images/hero-ellipse-bck.svg";
+import mobileVectaryLeft from "./images/mobile-vectary-left.svg";
 
 const assets = {
   layer,
@@ -128,6 +133,11 @@ const assets = {
   botProfile,
   status,
   chatPlaceholder,
+  menu,
+  clientSelected,
+  heroEllipse,
+  heroEllipseBck,
+  mobileVectaryLeft,
 };
 
 export default assets;

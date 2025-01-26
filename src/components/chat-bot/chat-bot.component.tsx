@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
 import Chatbot, { createChatBotMessage } from "react-chatbot-kit";
 import "react-chatbot-kit/build/main.css";
 import { DeviceFrameset } from "react-device-frameset";
@@ -54,6 +55,7 @@ class ActionProvider {
 
 const ChatBotModal = (props: Props) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -152,7 +154,19 @@ const ChatBotModal = (props: Props) => {
       size="lg"
       dialogClassName="modal-100w"
     >
-      <DeviceFrameset device="MacBook Pro" color="gold">
+      {!isMobile ? (
+        <DeviceFrameset device="MacBook Pro" color="gold">
+          <div className="mx-4">
+            <Modal.Body className="px-0 py-0">
+              <Chatbot
+                config={config}
+                messageParser={MessageParser}
+                actionProvider={ActionProvider}
+              />
+            </Modal.Body>
+          </div>
+        </DeviceFrameset>
+      ) : (
         <div className="mx-4">
           <Modal.Body className="px-0 py-0">
             <Chatbot
@@ -162,7 +176,7 @@ const ChatBotModal = (props: Props) => {
             />
           </Modal.Body>
         </div>
-      </DeviceFrameset>
+      )}
     </Modal>
   );
 };

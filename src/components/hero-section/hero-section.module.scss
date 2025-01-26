@@ -46,6 +46,28 @@
     left: 0;
     display: flex;
     justify-content: center;
+
+    @include mixins.responsive(md) {
+      width: unset !important;
+      left: unset;
+      gap: 5px;
+
+      .navOrder {
+        button {
+          order: -1;
+          border: unset !important;
+          width: inherit;
+
+          &::before {
+            background: unset;
+          }
+        }
+        a {
+          order: 1;
+          width: max-content;
+        }
+      }
+    }
   }
 
   .navbarWrapper {
@@ -58,12 +80,30 @@
     margin-right: auto;
     width: 100%;
     max-width: 120rem;
+
+    @include mixins.responsive(md) {
+      border-bottom: unset;
+    }
   }
 
   .navWrapperUl {
     display: flex;
     list-style: none;
     gap: 25px;
+    @include mixins.responsive(md) {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #fff;
+
+      .menuTitle {
+        padding-left: 1.5rem;
+        padding-bottom: 30px;
+        border-bottom: 1px solid;
+        border-image: linear-gradient(45deg, #f86cf8, #64cef5) 1;
+      }
+    }
   }
 
   .navbarLink {
@@ -108,18 +148,106 @@
       font-weight: 600;
       letter-spacing: 0.02em;
       width: max-content;
+
+      @include mixins.responsive(md) {
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        place-self: center;
+      }
     }
 
     span {
       font-size: 95px;
       line-height: 0.8;
       font-weight: 900;
-      font-family: "Poppins", sans-serif;
+
+      @include mixins.responsive(md) {
+        font-size: 55px;
+        line-height: unset;
+      }
     }
   }
 
   .logo {
     z-index: 2;
     position: relative;
+  }
+
+  @include mixins.responsive(md) {
+    height: 120vh;
+    &.collapsed {
+      background-color: unset !important;
+      background: unset;
+      &::before {
+        background-color: unset !important;
+        background: unset;
+      }
+    }
+    .ordered {
+      margin-bottom: 200px;
+      div:nth-child(1) {
+        order: 1;
+        flex-basis: unset;
+        max-width: 100%;
+        padding: unset;
+        place-items: center;
+      }
+      div:nth-child(2) {
+        order: -1;
+        flex-basis: unset;
+        max-width: 100%;
+        padding: unset;
+        place-items: center;
+        padding-top: 50px;
+        .logo {
+          width: 100%;
+        }
+      }
+    }
+    .clientSelected {
+      height: 100vh;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .heroEllipse {
+      position: absolute;
+      left: 0;
+      transform: translateY(124%);
+    }
+    .heroEllipseBck {
+      position: absolute;
+      left: 0;
+      transform: translateY(38%);
+    }
+    .vectaryLeft {
+      position: absolute;
+      left: 0;
+      transform: translateY(-35%);
+    }
+    .visit {
+      display: inline-grid;
+      gap: 7px;
+      margin-top: 50px;
+      .help {
+        background: linear-gradient(45deg, #7d3ace, #3873bf);
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+      }
+      ul {
+        margin: 20px;
+        gap: 8px;
+        margin-left: -20px;
+      }
+      .rights {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #fff;
+      }
+    }
   }
 }
