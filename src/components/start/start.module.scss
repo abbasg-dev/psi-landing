@@ -8,9 +8,7 @@
   left: 0;
   width: 100%;
   z-index: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-content: center;
 
   &::before {
     content: "";
@@ -39,8 +37,6 @@
     z-index: 2;
     position: relative;
     text-align: center;
-    display: flex;
-    flex-direction: column;
 
     .flexContainer {
       display: flex;
@@ -89,20 +85,12 @@
     button {
       background-color: transparent;
       border-radius: 16px !important;
-      padding: 10px 100px;
+      padding: 10px 70px;
       color: #fff;
       border: 3px solid #fff !important;
-      place-self: center;
-      margin-top: auto;
       font-weight: 600;
       font-size: 30px;
       cursor: url("/src/assets/images/cursor.svg") 16 16, auto;
-    }
-
-    @include mixins.responsive(md) {
-      display: flex;
-      margin: 0 auto;
-      justify-content: center;
     }
   }
 }
