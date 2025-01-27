@@ -67,6 +67,7 @@ import clientSelected from "./images/client-selected.svg";
 import heroEllipse from "./images/hero-ellipse.svg";
 import heroEllipseBck from "./images/hero-ellipse-bck.svg";
 import mobileVectaryLeft from "./images/mobile-vectary-left.svg";
+import mbBotVectary from "./images/mb-bot-vectary.svg";
 
 const assets = {
   layer,
@@ -138,6 +139,7 @@ const assets = {
   heroEllipse,
   heroEllipseBck,
   mobileVectaryLeft,
+  mbBotVectary,
 };
 
 export default assets;

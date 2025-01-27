@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Navbar, Nav, Row, Col } from "react-bootstrap";
 import assets from "../../assets";
 import Button from "../button/button.component";
-// import ChatBotModal from "../chat-bot/chat-bot.component";
+import ChatBotModal from "../chat-bot/chat-bot.component";
 import { useActiveLink } from "../../context/ActiveLinkContext";
 import styles from "./hero-section.module.scss";
 
@@ -11,7 +11,7 @@ const Hero = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const { activeLink, setActiveLink } = useActiveLink();
   const [isToggleOpen, setIsToggleOpen] = useState<boolean>(false);
-  // const [showChatBot, setShowChatBot] = useState<boolean>(false);
+  const [showChatBot, setShowChatBot] = useState<boolean>(false);
 
   const onUpdateActiveLink = (value: string) => {
     setActiveLink(value);
@@ -20,12 +20,6 @@ const Hero = () => {
   const handleToggle = () => {
     setIsToggleOpen((prevState) => !prevState);
   };
-
-  useEffect(() => {
-    if (!isMobile) {
-      setIsToggleOpen(false);
-    }
-  }, [isMobile]);
 
   return (
     <>
@@ -120,7 +114,7 @@ const Hero = () => {
             <div className={styles.visit}>
               <button
                 className={styles.help}
-                // onClick={() => setShowChatBot(true)}
+                onClick={() => setShowChatBot(true)}
               >
                 Hello ! Need help ?
               </button>
@@ -172,10 +166,10 @@ const Hero = () => {
           </>
         )}
       </header>
-      {/* <ChatBotModal
+      <ChatBotModal
         onClose={() => setShowChatBot(false)}
         showChatBot={showChatBot}
-      /> */}
+      />
     </>
   );
 };

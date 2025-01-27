@@ -76,6 +76,7 @@ const ChatBotModal = (props: Props) => {
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
+              border: "1px solid #fff",
             }}
           ></div>
         </div>
@@ -108,37 +109,68 @@ const ChatBotModal = (props: Props) => {
     ],
     customComponents: {
       header: () => (
-        <div className="d-flex w-100 align-items-center justify-content-between mt-4">
-          <div className="d-flex align-items-center gap-4">
-            <div
-              style={{
-                background: `url(${assets.botProfile})`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                width: 40,
-                height: 40,
-                borderRadius: "50%",
-              }}
-            />
-            <div>
-              <p className="mb-0 title">PSI Bot</p>
-              <div className="status gap-2 align-items-center d-flex">
-                <img src={assets.status} alt="status" />
-                Online
+        <>
+          <div
+            className={`d-flex w-100 align-items-center justify-content-between ${
+              isMobile ? "mt-1 gap-4" : "mt-4"
+            }`}
+          >
+            <div className={`d-block ${isMobile && "w-100"}`}>
+              <div className="d-flex align-items-center gap-4">
+                <div
+                  style={{
+                    background: `url(${assets.botProfile})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    width: 40,
+                    height: 40,
+                    borderRadius: "50%",
+                    border: "1px solid #fff",
+                  }}
+                />
+                <div>
+                  <p className="mb-0 title">PSI Bot</p>
+                  <div className="status gap-2 align-items-center d-flex">
+                    <img src={assets.status} alt="status" />
+                    Online
+                  </div>
+                </div>
               </div>
+              {isMobile && (
+                <hr
+                  style={{
+                    marginBottom: 5,
+                    borderImage: "linear-gradient(45deg, #f86cf8, #64cef5) 1",
+                  }}
+                />
+              )}
             </div>
+            {!isMobile ? (
+              <Button
+                imgSrc={isHovered ? assets.placholder : assets.chatPlaceholder}
+                altText={"close"}
+                text={"Close Chat"}
+                btnClass="close-chat-btn"
+                click={props.onClose}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              />
+            ) : (
+              <div
+                style={{
+                  background: `url(${assets.mbBotVectary})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  width: "20%",
+                  height: 120,
+                }}
+                onClick={props.onClose}
+              ></div>
+            )}
           </div>
-          <Button
-            imgSrc={isHovered ? assets.placholder : assets.chatPlaceholder}
-            altText={"close"}
-            text={"Close Chat"}
-            btnClass="close-chat-btn"
-            click={props.onClose}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          />
-        </div>
+        </>
       ),
       botAvatar: () => <BotAvatar />,
       userAvatar: () => <UserAvatar />,

@@ -1,7 +1,67 @@
+@use "../../styles/abstracts/" as mixins;
+
+.chatbot-modal {
+  overflow: hidden;
+}
+
+.modal-backdrop {
+  @include mixins.responsive(md) {
+    width: 400px !important;
+    height: 100vh !important;
+  }
+}
+
 .chatbot-modal .modal-content {
   margin-left: auto;
   margin-right: auto;
   border-radius: 35px !important;
+
+  @include mixins.responsive(md) {
+    margin: 0;
+    width: 400px;
+    height: 100vh !important;
+    background-color: #1b1e52;
+  }
+}
+
+.chatbot-modal {
+  @include mixins.responsive(md) {
+    height: 100vh;
+
+    .modal-dialog {
+      height: 100vh;
+      min-height: 100vh;
+      margin: unset;
+    }
+
+    .modal-content {
+      height: 100vh;
+      border-radius: unset !important;
+      border: unset;
+      width: auto;
+    }
+
+    .mx-4 {
+      height: 100vh;
+    }
+
+    .modal-body {
+      height: 100vh;
+    }
+  }
+}
+
+.chatbot-modal .modal-dialog {
+  @include mixins.responsive(md) {
+    width: 400px !important;
+  }
+}
+
+.chatbot-modal .modal-body {
+  overflow: hidden;
+  @include mixins.responsive(md) {
+    height: 100vh;
+  }
 }
 
 .chatbotModalClose {
@@ -34,6 +94,9 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
+  @include mixins.responsive(md) {
+    color: #fff;
+  }
 }
 
 .title {
@@ -41,4 +104,13 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 25px;
+  @include mixins.responsive(md) {
+    color: #fff;
+  }
+}
+
+.modal-dialog-centered {
+  @include mixins.responsive(md) {
+    min-height: 100vh !important;
+  }
 }

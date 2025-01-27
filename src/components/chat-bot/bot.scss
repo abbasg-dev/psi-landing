@@ -1,15 +1,30 @@
+@use "../../styles/abstracts/" as mixins;
+
 .react-chatbot-kit-chat-container {
   width: 100%;
+
+  @include mixins.responsive(md) {
+    height: 100vh;
+    width: 400px;
+  }
 }
 
 .react-chatbot-kit-chat-inner-container {
   height: 100%;
   background-color: transparent;
+  @include mixins.responsive(md) {
+    height: 100vh;
+  }
 }
 
 .react-chatbot-kit-chat-input-container {
   padding: 0;
   margin-bottom: 10px;
+  @include mixins.responsive(md) {
+    margin-bottom: 35px;
+    background-color: #fff;
+    border-radius: 12px;
+  }
 }
 
 .react-chatbot-kit-chat-message-container {
@@ -17,6 +32,10 @@
   padding: 0.5rem 1.1rem;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  @include mixins.responsive(md) {
+    min-height: 80vh;
+  }
 }
 
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar {
@@ -40,6 +59,9 @@
   border: 2px solid #e2e8f0;
   border-radius: 12px;
   align-items: center;
+  @include mixins.responsive(md) {
+    color: #fff;
+  }
 }
 
 .react-chatbot-kit-chat-input::placeholder {
