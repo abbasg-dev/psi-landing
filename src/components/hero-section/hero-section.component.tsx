@@ -93,12 +93,17 @@ const Hero = () => {
                       </>
                     )}
                     <span>METAVERSE</span>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div
+                      className={
+                        isMobile
+                          ? "d-flex align-items-center justify-content-center mt-5"
+                          : "mt-2"
+                      }
+                    >
                       <Button
                         imgSrc={assets.placholder}
                         altText={"placholder"}
                         text={"Try it for free"}
-                        btnClass="mt-2"
                       />
                     </div>
                   </div>
