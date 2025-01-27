@@ -153,7 +153,6 @@
       @include mixins.responsive(md) {
         font-size: 30px;
         letter-spacing: 0.02em;
-        place-self: center;
       }
     }
 
@@ -193,15 +192,14 @@
       div:nth-child(1) {
         order: 1;
         flex-basis: unset;
-        max-width: 100%;
-        padding: unset;
+        width: 100%;
+        justify-items: center;
       }
       div:nth-child(2) {
         order: -1;
         flex-basis: unset;
-        max-width: 100%;
-        padding: unset;
-        place-items: center;
+        width: 100%;
+        justify-items: center;
         padding-top: 50px;
         .logo {
           width: 100%;

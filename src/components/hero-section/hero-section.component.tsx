@@ -78,7 +78,7 @@ const Hero = () => {
             <>
               <video src={assets.hero} autoPlay loop muted />
               <Row className={styles.ordered}>
-                <Col className="col-xlg-6 col-lg-6">
+                <Col lg={6} md={12}>
                   <div className={styles.letsTry}>
                     {isMobile ? (
                       <>
@@ -108,7 +108,7 @@ const Hero = () => {
                     </div>
                   </div>
                 </Col>
-                <Col className="col-xlg-6 col-lg-6">
+                <Col lg={6} md={12}>
                   <img src={assets.logo} alt="logo" className={styles.logo} />
                 </Col>
               </Row>
