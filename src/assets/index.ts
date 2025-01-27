@@ -71,6 +71,7 @@ import mbBotVectary from "./images/mb-bot-vectary.svg";
 import whyEllipseLeft from "./images/why-ellipse-left.svg";
 import whyEllipseBck from "./images/why-ellipse-bck.svg";
 import whyEllipseRight from "./images/why-ellipse-right.svg";
+import aboutBanner from "./images/about-banner.svg";
 
 const assets = {
   layer,
@@ -146,6 +147,7 @@ const assets = {
   whyEllipseLeft,
   whyEllipseBck,
   whyEllipseRight,
+  aboutBanner,
 };
 
 export default assets;

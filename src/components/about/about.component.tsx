@@ -1,3 +1,4 @@
+import { useMediaQuery } from "react-responsive";
 import { Row, Col } from "react-bootstrap";
 import Title from "../title/title.component";
 import Button from "../button/button.component";
@@ -5,13 +6,15 @@ import assets from "../../assets";
 import styles from "./about.module.scss";
 
 const About = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   return (
     <section className={styles.about} id="about">
       <div className="container">
         <div className={styles.aboutWrapper}>
+          {isMobile && <Title title={"About PSI World"} />}
           <Row>
             <Col className="col-xlg-6 col-lg-6">
-              <Title title={"About PSI World"} />
+              {!isMobile && <Title title={"About PSI World"} />}
               <p className={styles.info}>
                 Experience the future of real estate with Property Shop
                 Investment’s (PSI) cutting-edge platform. Explore properties
@@ -23,15 +26,8 @@ const About = () => {
                 seamlessly booking your dream property.
               </p>
             </Col>
-            <Col className="col-xlg-6 col-lg-6 position-relative">
-              <div
-                style={{ backgroundImage: `url(${assets.visionProOne})` }}
-                className={styles.card1}
-              ></div>
-              <div
-                style={{ backgroundImage: `url(${assets.visionProTwo})` }}
-                className={styles.card2}
-              ></div>
+            <Col className="col-xlg-6 col-lg-6">
+              <img src={assets.aboutBanner} alt="banner" />
             </Col>
           </Row>
           <div className="d-flex justify-content-center align-items-center">
