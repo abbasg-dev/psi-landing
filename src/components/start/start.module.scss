@@ -98,6 +98,11 @@
       font-size: 30px;
       cursor: url("/src/assets/images/cursor.svg") 16 16, auto;
     }
+
+    @include mixins.responsive(md) {
+      display: block;
+      margin: 0 auto;
+    }
   }
 }
 

@@ -28,7 +28,7 @@ const Start: React.FC<StartProps> = ({ onStart }) => {
           </div>
           <div className={styles.wlcm}>Welcome to Another world</div>
           <div className={styles.company}>METAVERSE</div>
-          <div className="mt-5">
+          <div className="mt-5 text-center">
             <Button altText={"start"} text={"Start"} click={onStart} />
           </div>
         </div>
