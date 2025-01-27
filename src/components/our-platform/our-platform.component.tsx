@@ -1,9 +1,11 @@
+import { useMediaQuery } from "react-responsive";
 import { Row, Col } from "react-bootstrap";
 import Title from "../title/title.component";
 import styles from "./our-platform.module.scss";
 import assets from "../../assets";
 
 const OurPlatform = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const reasons = [
     {
       title: "Immersive Virtual Tours",
@@ -32,14 +34,19 @@ const OurPlatform = () => {
   ];
   return (
     <section className={styles.platform} id="features">
-      <div className="d-flex justify-content-center align-items-center">
+      <div className="d-flex justify-content-center align-items-center mb-4">
         <Title title="Why Choose Our Platform?" />
       </div>
       <div className="container">
         <Row>
           {reasons?.map((item, index) => {
             return (
-              <Col className="col-xlg-6 col-lg-6" key={index}>
+              <Col
+                lg={6}
+                md={12}
+                className={"px-lg-3 px-md-3 px-0 py-md-2 py-2"}
+                key={index}
+              >
                 <div className={`d-flex ${styles.item}`}>
                   <div className="d-block">
                     <h3>{item.title}</h3>
@@ -57,20 +64,31 @@ const OurPlatform = () => {
           })}
         </Row>
       </div>
+      {!isMobile && (
+        <>
+          <img
+            src={assets.ellipse15}
+            className={styles.platformEllipse1}
+            alt="new-left-ellipse1"
+          />
+          <img
+            src={assets.ellipse23}
+            className={styles.platformEllipse3}
+            alt="right-ellipse1"
+          />
+        </>
+      )}
+      {isMobile && (
+        <img
+          src={assets.platformEllipse2}
+          className={styles.platformMobEllipse}
+          alt="platform-mob-ellipse"
+        />
+      )}
       <img
-        src={assets.ellipse15}
-        className={styles.platformEllipse1}
-        alt="new-left-ellipse1"
-      />
-      <img
-        src={assets.ellipse16}
+        src={isMobile ? assets.platformEllipse1 : assets.ellipse16}
         className={styles.platformEllipse2}
         alt="new-left-ellipse2"
-      />
-      <img
-        src={assets.ellipse23}
-        className={styles.platformEllipse3}
-        alt="right-ellipse1"
       />
       <img
         src={assets.ellipse8}
