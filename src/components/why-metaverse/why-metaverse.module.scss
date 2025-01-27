@@ -17,6 +17,12 @@
       z-index: 10;
       height: auto;
       pointer-events: none;
+
+      @include mixins.responsive(md) {
+        z-index: 11;
+        width: 86px;
+        top: 65px;
+      }
     }
 
     .vectary {
@@ -44,6 +50,20 @@
       padding: 50px;
       border-top-left-radius: 228.5px;
       box-shadow: -20px 3px 13px -20px rgba(255, 255, 255, 0.25);
+
+      @include mixins.responsive(md) {
+        right: unset;
+        height: unset;
+        padding: unset;
+        border-top-left-radius: 71.5px;
+        border-top-right-radius: 71.5px;
+        margin: 0 15px;
+        margin-top: 35px;
+      }
+    }
+
+    @include mixins.responsive(md) {
+      justify-content: unset;
     }
   }
 
@@ -163,6 +183,60 @@
         display: none;
       }
     }
+
+    @include mixins.responsive(md) {
+      height: 150px;
+      width: 378px;
+      margin: 8px 0;
+
+      &::before {
+        top: 50%;
+        left: 0;
+        height: 2px;
+        width: 18%;
+        transform: translateY(-50%);
+      }
+
+      .shownContent {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: unset;
+        transform: unset;
+        flex-direction: unset;
+        height: 100%;
+        justify-content: space-between;
+        gap: unset;
+        width: 80%;
+
+        .title {
+          font-size: 16px;
+        }
+
+        img {
+          width: 132px;
+          height: 132px;
+        }
+      }
+
+      .hiddenContent {
+        .hiddenDescription {
+          font-weight: 400;
+          font-size: 12px;
+        }
+      }
+
+      &:hover {
+        height: 400px;
+      }
+    }
+  }
+
+  .cubesRow {
+    @include mixins.responsive(md) {
+      display: block;
+      margin-top: 15rem;
+    }
   }
 }
 
@@ -171,6 +245,13 @@
   left: 0;
   height: 928px;
   transform: translateY(-90%) rotate(0);
+
+  @include mixins.responsive(md) {
+    left: unset;
+    right: 0;
+    transform: translateY(-100%) rotate(0);
+    z-index: 11;
+  }
 }
 
 .whyWrapper .coronaRightImg {
@@ -179,6 +260,13 @@
   right: 0;
   top: 0;
   transform: translateY(100%);
+
+  @include mixins.responsive(md) {
+    height: 281px;
+    left: 0;
+    right: unset;
+    top: 35%;
+  }
 }
 
 .whyWrapper .ellipseRightImg {
@@ -186,4 +274,10 @@
   right: 0;
   height: 960px;
   transform: translateY(-75%);
+
+  @include mixins.responsive(md) {
+    right: unset;
+    left: 0;
+    transform: translateY(-50%);
+  }
 }

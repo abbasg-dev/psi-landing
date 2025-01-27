@@ -68,6 +68,9 @@ import heroEllipse from "./images/hero-ellipse.svg";
 import heroEllipseBck from "./images/hero-ellipse-bck.svg";
 import mobileVectaryLeft from "./images/mobile-vectary-left.svg";
 import mbBotVectary from "./images/mb-bot-vectary.svg";
+import whyEllipseLeft from "./images/why-ellipse-left.svg";
+import whyEllipseBck from "./images/why-ellipse-bck.svg";
+import whyEllipseRight from "./images/why-ellipse-right.svg";
 
 const assets = {
   layer,
@@ -140,6 +143,9 @@ const assets = {
   heroEllipseBck,
   mobileVectaryLeft,
   mbBotVectary,
+  whyEllipseLeft,
+  whyEllipseBck,
+  whyEllipseRight,
 };
 
 export default assets;
