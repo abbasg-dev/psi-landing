@@ -57,6 +57,8 @@
   }
 
   @include mixins.responsive(md) {
+    padding: unset;
+
     .bckEllipse {
       position: absolute;
       right: 0;
