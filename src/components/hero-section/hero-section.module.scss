@@ -140,6 +140,7 @@
     color: #fff;
     z-index: 2;
     position: relative;
+    width: max-content;
 
     h1 {
       line-height: 1.1;
@@ -166,6 +167,10 @@
         line-height: unset;
       }
     }
+
+    @include mixins.responsive(md) {
+      text-align: center;
+    }
   }
 
   .logo {
@@ -190,7 +195,6 @@
         flex-basis: unset;
         max-width: 100%;
         padding: unset;
-        place-items: center;
       }
       div:nth-child(2) {
         order: -1;

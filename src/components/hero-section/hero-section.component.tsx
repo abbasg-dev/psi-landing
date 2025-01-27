@@ -80,26 +80,25 @@ const Hero = () => {
               <Row className={styles.ordered}>
                 <Col className="col-xlg-6 col-lg-6">
                   <div className={styles.letsTry}>
-                    <div>
-                      {isMobile ? (
-                        <>
-                          <h1>WELCOME TO THE FUTURE</h1>
-                          <h1> OF REAL ESTATE IN THE</h1>
-                        </>
-                      ) : (
-                        <>
-                          <h1>WELCOME TO</h1>
-                          <h1>THE FUTURE OF</h1>
-                          <h1>REAL ESTATE IN THE</h1>
-                        </>
-                      )}
-                      <span>METAVERSE</span>
-                    </div>
-                    <div className="mt-2">
+                    {isMobile ? (
+                      <>
+                        <h1>WELCOME TO THE FUTURE</h1>
+                        <h1> OF REAL ESTATE IN THE</h1>
+                      </>
+                    ) : (
+                      <>
+                        <h1>WELCOME TO</h1>
+                        <h1>THE FUTURE OF</h1>
+                        <h1>REAL ESTATE IN THE</h1>
+                      </>
+                    )}
+                    <span>METAVERSE</span>
+                    <div className="d-flex align-items-center justify-content-center">
                       <Button
                         imgSrc={assets.placholder}
                         altText={"placholder"}
                         text={"Try it for free"}
+                        btnClass="mt-2"
                       />
                     </div>
                   </div>
