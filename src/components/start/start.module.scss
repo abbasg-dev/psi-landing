@@ -100,8 +100,9 @@
     }
 
     @include mixins.responsive(md) {
-      display: block;
+      display: flex;
       margin: 0 auto;
+      justify-content: center;
     }
   }
 }
