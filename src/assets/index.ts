@@ -72,6 +72,7 @@ import whyEllipseLeft from "./images/why-ellipse-left.svg";
 import whyEllipseBck from "./images/why-ellipse-bck.svg";
 import whyEllipseRight from "./images/why-ellipse-right.svg";
 import aboutBanner from "./images/about-banner.svg";
+import aboutEllipse from "./images/about-ellipse.svg";
 
 const assets = {
   layer,
@@ -148,6 +149,7 @@ const assets = {
   whyEllipseBck,
   whyEllipseRight,
   aboutBanner,
+  aboutEllipse,
 };
 
 export default assets;

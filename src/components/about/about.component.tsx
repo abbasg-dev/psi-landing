@@ -39,6 +39,13 @@ const About = () => {
           </div>
         </div>
       </div>
+      {isMobile && (
+        <img
+          src={assets.aboutEllipse}
+          className={styles.bckEllipse}
+          alt="about-ellipse"
+        />
+      )}
     </section>
   );
 };
