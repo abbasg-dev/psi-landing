@@ -21,7 +21,7 @@
       @include mixins.responsive(md) {
         z-index: 11;
         width: 86px;
-        top: 65px;
+        top: 95px;
       }
     }
 
@@ -68,7 +68,10 @@
     }
 
     @include mixins.responsive(md) {
-      justify-content: unset;
+      padding: 30px;
+      .whyQ {
+        margin-top: 20px;
+      }
     }
   }
 
