@@ -53,6 +53,10 @@
     border-radius: 16px;
     border: 0.76px solid #aa14f0;
     background-color: #2f295e;
+
+    @include mixins.responsive(md) {
+      padding: 0;
+    }
   }
 
   .stepItem {
@@ -100,7 +104,16 @@
       color: #ffffff;
       margin-bottom: 0;
       padding: 0;
+
+      @include mixins.responsive(md) {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
+  }
+
+  @include mixins.responsive(md) {
+    padding: 50px 0;
   }
 }
 
@@ -110,6 +123,11 @@
   height: 928px;
   transform: translateY(-85%) rotate(0);
   z-index: 1;
+
+  @include mixins.responsive(md) {
+    transform: unset;
+    top: 10%;
+  }
 }
 
 .journey .property {
@@ -117,6 +135,12 @@
   right: 0;
   top: 0;
   transform: translateY(25%);
+
+  @include mixins.responsive(md) {
+    transform: unset;
+    top: unset;
+    bottom: 7%;
+  }
 }
 
 .journey .journeyRightEllipse {
@@ -125,4 +149,13 @@
   right: 0;
   top: 63%;
   transform: translateX(50%);
+
+  @include mixins.responsive(md) {
+    width: 128px;
+    top: 1%;
+    left: 0;
+    right: unset;
+    transform: unset;
+    height: unset;
+  }
 }

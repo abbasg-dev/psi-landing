@@ -1,9 +1,11 @@
 import { Row, Col } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
 import Title from "../title/title.component";
 import assets from "../../assets";
 import styles from "./journey.module.scss";
 
 const Journey = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const steps = [
     {
       description: "Create Your Character: Personalize your virtual avatar",
@@ -29,14 +31,19 @@ const Journey = () => {
         <Title title={"Your Journey in the Metaverse: Step by Step"} />
       </div>
       <div className="container">
-        <Row>
-          <Col className="col-xlg-4 col-lg-4">
-            <div className="position-relative">
+        <div className="row">
+          <Col lg={4} md={12}>
+            <div
+              className="position-relative"
+              style={{
+                height: isMobile ? 649 : "unset",
+              }}
+            >
               <div className={styles.card1}></div>
               <div className={styles.card2}></div>
             </div>
           </Col>
-          <Col className="col-xlg-8 col-lg-8">
+          <Col lg={8} md={12} style={{ marginTop: isMobile ? 150 : "unset" }}>
             {steps?.map((item, index) => {
               return (
                 <div className={styles.stepItem} key={index}>
@@ -53,14 +60,14 @@ const Journey = () => {
                       <div className={styles.dashedLine}></div>
                     )}
                   </div>
-                  <Row className="col-xlg-5 col-lg-5">
+                  <Row lg={5} md={12}>
                     <p>{item?.description}</p>
                   </Row>
                 </div>
               );
             })}
           </Col>
-        </Row>
+        </div>
       </div>
       <img
         src={assets.ellipse19}
