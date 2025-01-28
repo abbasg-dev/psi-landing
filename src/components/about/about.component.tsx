@@ -11,7 +11,11 @@ const About = () => {
     <section className={styles.about} id="about">
       <div className="container">
         <div className={styles.aboutWrapper}>
-          {isMobile && <Title title={"About PSI World"} />}
+          {isMobile && (
+            <div className="d-flex align-items-center justify-content-center mb-4">
+              <Title title={"About PSI World"} />
+            </div>
+          )}
           <Row>
             <Col className="col-xlg-6 col-lg-6">
               {!isMobile && <Title title={"About PSI World"} />}
