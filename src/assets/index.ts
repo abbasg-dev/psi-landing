@@ -33,7 +33,6 @@ import ellipse1 from "./images/Ellipse 1.svg";
 import ellipse23 from "./images/Ellipse 23.svg";
 import ellipse17 from "./images/Ellipse 17.svg";
 import ellipse19 from "./images/Ellipse 19.svg";
-import lady from "./images/lady.png";
 import one from "./images/one.svg";
 import two from "./images/two.svg";
 import three from "./images/three.svg";
@@ -75,6 +74,7 @@ import aboutBanner from "./images/about-banner.svg";
 import aboutEllipse from "./images/about-ellipse.svg";
 import platformEllipse1 from "./images/platform-ellipse-1.svg";
 import platformEllipse2 from "./images/platform-ellipse-2.svg";
+import lady from "./images/lady.svg";
 
 const assets = {
   layer,
@@ -112,7 +112,6 @@ const assets = {
   ellipse23,
   ellipse17,
   ellipse19,
-  lady,
   one,
   two,
   three,
@@ -154,6 +153,7 @@ const assets = {
   aboutEllipse,
   platformEllipse1,
   platformEllipse2,
+  lady,
 };
 
 export default assets;
