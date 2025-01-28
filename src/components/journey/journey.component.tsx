@@ -54,7 +54,7 @@ const Journey = () => {
                       <div className={styles.dashedLine}></div>
                     )}
                   </div>
-                  <Row className="col-xlg-5 col-lg-5 col-md-12">
+                  <Row className="col-xlg-5 col-lg-5 col-md-12 px-lg-0 px-md-3 px-3">
                     <p>{item?.description}</p>
                   </Row>
                 </div>

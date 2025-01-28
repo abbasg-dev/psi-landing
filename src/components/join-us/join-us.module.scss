@@ -44,3 +44,12 @@
   top: 0;
   transform: translateY(-10%);
 }
+
+.leftEllipse {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  transform: unset;
+  height: 928px;
+  z-index: -1;
+}

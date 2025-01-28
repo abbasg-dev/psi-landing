@@ -155,6 +155,13 @@ const JoinUs = () => {
           alt="join-us-ellipse"
         />
       )}
+      {isMobile && (
+        <img
+          src={assets.ellipse19}
+          className={styles.leftEllipse}
+          alt="left-ellipse"
+        />
+      )}
     </section>
   );
 };
