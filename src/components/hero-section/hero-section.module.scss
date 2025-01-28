@@ -171,7 +171,7 @@
   }
 
   @include mixins.responsive(md) {
-    height: 120vh;
+    height: 100vh;
     &.collapsed {
       background-color: unset !important;
       background: unset;
@@ -208,12 +208,12 @@
     .heroEllipse {
       position: absolute;
       left: 0;
-      transform: translateY(124%);
+      bottom: 0;
     }
     .heroEllipseBck {
       position: absolute;
       left: 0;
-      transform: translateY(38%);
+      bottom: 0;
     }
     .vectaryLeft {
       position: absolute;

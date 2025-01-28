@@ -3,10 +3,12 @@ import { Row } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import Title from "../title/title.component";
 import ChatBotModal from "../chat-bot/chat-bot.component";
+import { useToggle } from "../../context/ToggleContext";
 import assets from "../../assets";
 import styles from "./why-metaverse.module.scss";
 const WhyMetaverse = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+  const { isToggleOpen } = useToggle();
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const [showChatBot, setShowChatBot] = useState<boolean>(false);
   const content = [
@@ -62,7 +64,11 @@ const WhyMetaverse = () => {
             className={styles.vectary}
             onClick={() => setShowChatBot(true)}
           />
-          <div className={styles.whyQ}>
+          <div
+            className={
+              isToggleOpen ? `${styles.whyQ} ${styles.toggle}` : styles.whyQ
+            }
+          >
             <Title title="Why Choose PSI’s Metaverse Platform?" />
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import Hero from "./components/hero-section/hero-section.component";
 import WhyMetaverse from "./components/why-metaverse/why-metaverse.component";
 import About from "./components/about/about.component";
@@ -8,9 +9,12 @@ import JoinUs from "./components/join-us/join-us.component";
 import Footer from "./components/footer/footer.component";
 import Start from "./components/start/start.component";
 import Loading from "./components/loader/loader.component";
+import { useToggle } from "./context/ToggleContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+  const { isToggleOpen } = useToggle();
   const [showLoading, setShowLoading] = useState(false);
   const [showHome, setShowHome] = useState(false);
 
@@ -32,12 +36,14 @@ function App() {
   return (
     <>
       <Hero />
-      <WhyMetaverse />
-      <About />
-      <OurPlatform />
-      <Journey />
-      <JoinUs />
-      <Footer />
+      <div className={isMobile && isToggleOpen ? "d-none" : "unset"}>
+        <WhyMetaverse />
+        <About />
+        <OurPlatform />
+        <Journey />
+        <JoinUs />
+        <Footer />
+      </div>
     </>
   );
 }

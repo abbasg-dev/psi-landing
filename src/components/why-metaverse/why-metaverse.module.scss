@@ -59,6 +59,11 @@
         border-top-left-radius: 71.5px;
         border-top-right-radius: 71.5px;
         margin: 0 15px;
+
+        &.toggle {
+          z-index: -1;
+          bottom: unset;
+        }
       }
     }
 
