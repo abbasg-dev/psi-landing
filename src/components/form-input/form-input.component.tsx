@@ -20,7 +20,7 @@ const FormInput: React.FC<InputComponentProps> = ({
   icon,
 }) => {
   return (
-    <Form.Group controlId={fieldId} className="form-group">
+    <Form.Group controlId={fieldId} className="form-group my-4">
       <div className="input-group">
         <Form.Control
           type={type}

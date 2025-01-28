@@ -30,7 +30,11 @@ const Journey = () => {
       </div>
       <div className="container px-md-0 px-0 mt-3">
         <div className="row">
-          <Col lg={4} md={12} className="text-center px-lg-5 px-md-0 px-0">
+          <Col
+            lg={4}
+            md={12}
+            className="align-content-center px-lg-5 px-md-5 px-5"
+          >
             <img src={assets.lady} alt="lady" />
           </Col>
           <Col lg={8} md={12} className="px-lg-5 px-md-0 px-0">

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 import { Controller, FormProvider, useForm } from "react-hook-form";
-import { Form } from "react-bootstrap";
+import { Col, Form } from "react-bootstrap";
 import Title from "../title/title.component";
 import FormInput from "../form-input/form-input.component";
 import PhoneNumberField from "../phone-number-field/phone-number-field.component";
@@ -15,6 +16,7 @@ interface JoinData {
   email?: string;
 }
 const JoinUs = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const methods = useForm<JoinData>({
     mode: "onChange",
     reValidateMode: "onChange",
@@ -50,7 +52,11 @@ const JoinUs = () => {
             <Title title={"Join the Future of Real Estate"} />
           </div>
           <div className="row">
-            <div className="col-lg-6 col-md-6">
+            <Col
+              lg={6}
+              md={12}
+              className="px-lg-5 px-md-0 px-0 py-0 align-content-center"
+            >
               <p className={styles.signup}>
                 Sign up now to access exclusive content and be the first to
                 explore our Metaverse platform.
@@ -127,22 +133,28 @@ const JoinUs = () => {
                   </div>
                 </Form>
               </FormProvider>
-            </div>
-            <div className="col-lg-6 col-md-6">
+            </Col>
+            <Col
+              lg={6}
+              md={12}
+              className="text-center px-lg-5 px-md-0 px-0 py-0"
+            >
               <img
                 src={assets.blendLogo}
                 alt="blend-logo"
-                style={{ display: "flex", margin: "0 auto" }}
+                style={{ width: "100%" }}
               />
-            </div>
+            </Col>
           </div>
         </div>
       </div>
-      <img
-        src={assets.ellipse7}
-        className={styles.joinUsEllipse}
-        alt="join-us-ellipse"
-      />
+      {!isMobile && (
+        <img
+          src={assets.ellipse7}
+          className={styles.joinUsEllipse}
+          alt="join-us-ellipse"
+        />
+      )}
     </section>
   );
 };
