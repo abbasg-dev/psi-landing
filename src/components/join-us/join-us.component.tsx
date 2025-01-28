@@ -43,7 +43,7 @@ const JoinUs = () => {
 
   return (
     <section className={styles.joinUs} id="contact">
-      <div className="container">
+      <div className="container px-lg-3 px-md-3 px-3">
         <div className={styles.joinUsContainer}>
           <div
             className="position-relative p-0 me-0"
@@ -134,19 +134,30 @@ const JoinUs = () => {
                 </Form>
               </FormProvider>
             </Col>
-            <Col
-              lg={6}
-              md={12}
-              className="text-center px-lg-5 px-md-0 px-0 py-0"
-            >
-              <img
-                src={assets.blendLogo}
-                alt="blend-logo"
-                style={{ width: "100%" }}
-              />
-            </Col>
+            {!isMobile && (
+              <Col
+                lg={6}
+                md={12}
+                className="text-center px-lg-5 px-md-0 px-0 py-0"
+              >
+                <img
+                  src={assets.blendLogo}
+                  alt="blend-logo"
+                  style={{ width: "100%" }}
+                />
+              </Col>
+            )}
           </div>
         </div>
+        {isMobile && (
+          <Col lg={6} md={12} className="text-center px-lg-5 px-md-0 px-0 py-0">
+            <img
+              src={assets.blendLogo}
+              alt="blend-logo"
+              style={{ width: "100%" }}
+            />
+          </Col>
+        )}
       </div>
       {!isMobile && (
         <img
@@ -156,11 +167,18 @@ const JoinUs = () => {
         />
       )}
       {isMobile && (
-        <img
-          src={assets.ellipse19}
-          className={styles.leftEllipse}
-          alt="left-ellipse"
-        />
+        <>
+          <img
+            src={assets.ellipse19}
+            className={styles.leftEllipse}
+            alt="left-ellipse"
+          />
+          <img
+            src={assets.jREllipse}
+            className={styles.leftBottomEllipse}
+            alt="left-bottom-ellipse"
+          />
+        </>
       )}
     </section>
   );

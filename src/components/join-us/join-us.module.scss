@@ -3,8 +3,7 @@
 .joinUs {
   position: relative;
   min-height: auto;
-  overflow: hidden;
-  padding: 60px 0;
+  overflow: visible;
 
   &Container {
     border: 0.76px solid #aa14f0 !important;
@@ -12,7 +11,6 @@
     border-radius: 16px;
     overflow: hidden;
     min-height: auto;
-    padding: 20px 60px;
     justify-self: center;
     width: 100%;
 
@@ -33,7 +31,7 @@
     }
 
     @include mixins.responsive(md) {
-      padding: 30px;
+      padding: 25px;
     }
   }
 }
@@ -48,8 +46,18 @@
 .leftEllipse {
   position: absolute;
   left: 0;
-  top: 25%;
+  top: 15%;
   transform: unset;
   height: 928px;
+  z-index: -1;
+}
+
+.leftBottomEllipse {
+  position: absolute;
+  width: 128px;
+  top: 90%;
+  left: 0;
+  right: unset;
+  transform: unset;
   z-index: -1;
 }
