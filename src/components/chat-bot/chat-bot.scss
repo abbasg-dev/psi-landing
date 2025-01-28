@@ -18,7 +18,7 @@
 
   @include mixins.responsive(md) {
     margin: 0;
-    width: 400px;
+    //width: 400px;
     height: 100vh !important;
     background-color: #1b1e52;
   }
@@ -38,7 +38,7 @@
       height: 100vh;
       border-radius: unset !important;
       border: unset;
-      width: auto;
+      //width: auto;
     }
 
     .mx-4 {
@@ -54,6 +54,7 @@
 .chatbot-modal .modal-dialog {
   @include mixins.responsive(md) {
     width: 400px !important;
+    min-width: 100%;
   }
 }
 
