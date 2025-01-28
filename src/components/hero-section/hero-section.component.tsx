@@ -78,13 +78,12 @@ const Hero = () => {
             <>
               <video src={assets.hero} autoPlay loop muted />
               <Row className={styles.ordered}>
-                <Col lg={6} md={12}>
+                <Col lg={6} md={12} className={"px-lg-2 px-md-0 px-0"}>
                   <div className={styles.letsTry}>
                     {isMobile ? (
-                      <>
-                        <h1>WELCOME TO THE FUTURE</h1>
-                        <h1> OF REAL ESTATE IN THE</h1>
-                      </>
+                      <p className={styles.heroMsg}>
+                        WELCOME TO THE FUTURE OF REAL ESTATE IN THE
+                      </p>
                     ) : (
                       <>
                         <h1>WELCOME TO</h1>

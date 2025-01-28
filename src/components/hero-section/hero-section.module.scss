@@ -142,18 +142,11 @@
     position: relative;
     width: max-content;
 
-    h1 {
-      line-height: 1.1;
-      font-size: 59px;
+    .heroMsg {
+      line-height: 40px;
+      font-size: 30px;
       margin-bottom: unset;
       font-weight: 600;
-      letter-spacing: 0.02em;
-      width: max-content;
-
-      @include mixins.responsive(md) {
-        font-size: 30px;
-        letter-spacing: 0.02em;
-      }
     }
 
     span {
