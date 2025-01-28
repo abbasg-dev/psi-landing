@@ -47,7 +47,7 @@ const JoinUs = () => {
         <div className={styles.joinUsContainer}>
           <div
             className="position-relative p-0 me-0"
-            style={{ justifyItems: "left" }}
+            style={{ justifyItems: isMobile ? "unset" : "left" }}
           >
             <Title title={"Join the Future of Real Estate"} />
           </div>
