@@ -37,4 +37,9 @@
     text-align: center;
     padding-top: 25px;
   }
+
+  @include mixins.responsive(md) {
+    padding: 12px 0;
+    margin: 0 24px;
+  }
 }
