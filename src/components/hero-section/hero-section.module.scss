@@ -170,6 +170,12 @@
     position: relative;
   }
 
+  .heroRightEllipse {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
   @include mixins.responsive(md) {
     height: 100vh;
     &.collapsed {

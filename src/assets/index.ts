@@ -75,6 +75,10 @@ import aboutEllipse from "./images/about-ellipse.svg";
 import platformEllipse1 from "./images/platform-ellipse-1.svg";
 import platformEllipse2 from "./images/platform-ellipse-2.svg";
 import lady from "./images/lady.svg";
+import heroRightEllipse from "./images/hero-r-ellipse.svg";
+import pLetter from "./images/p-letter.svg";
+import sLetter from "./images/s-letter.svg";
+import iLetter from "./images/i-letter.svg";
 
 const assets = {
   layer,
@@ -154,6 +158,10 @@ const assets = {
   platformEllipse1,
   platformEllipse2,
   lady,
+  heroRightEllipse,
+  pLetter,
+  sLetter,
+  iLetter,
 };
 
 export default assets;
