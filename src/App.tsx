@@ -62,11 +62,7 @@ function App() {
         <img
           src={assets.vectary}
           alt="vectary"
-          className={`${
-            showChatBot && vectaryPosition < 70
-              ? "vectary bot_clicked"
-              : "vectary"
-          }`}
+          className={`${showChatBot ? "vectary bot_clicked" : "vectary"}`}
           style={{
             bottom: `${vectaryPosition}%`,
           }}

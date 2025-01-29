@@ -29,7 +29,7 @@ body {
 
     &.bot_clicked {
       width: 280px;
-      transform: scale(4);
+      bottom: auto !important;
     }
 
     @include mixins.responsive(md) {
