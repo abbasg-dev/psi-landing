@@ -1,4 +1,4 @@
-@use "../abstracts" as abstracts;
+@use "../../styles/abstracts/" as mixins;
 
 body {
   font-family: "Arial", sans-serif;
@@ -15,5 +15,26 @@ body {
     display: flex;
     margin: 0 auto;
     justify-content: center;
+  }
+
+  .vectary {
+    position: fixed;
+    z-index: 15;
+    height: auto;
+    right: 0;
+    bottom: 0%;
+    cursor: url("/src/assets/images/cursor.svg") 16 16, auto;
+    animation: dance 1s ease-in-out infinite;
+    transition: bottom 0.2s ease;
+
+    &.bot_clicked {
+      width: 280px;
+      right: 5px;
+      transform: scale(4);
+    }
+
+    @include mixins.responsive(md) {
+      display: none;
+    }
   }
 }
