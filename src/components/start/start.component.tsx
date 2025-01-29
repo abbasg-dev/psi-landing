@@ -1,4 +1,5 @@
 import Button from "../button/button.component";
+import Stars from "../stars/stars.component";
 import assets from "../../assets";
 import styles from "./start.module.scss";
 
@@ -27,7 +28,11 @@ const Start: React.FC<StartProps> = ({ onStart }) => {
             </div>
           </div>
           <div className={styles.wlcm}>Welcome to Another world</div>
-          <div className={styles.company}>METAVERSE</div>
+          <div className={styles.company}>
+            <Stars />
+            METAVERSE
+            <Stars />
+          </div>
           <div className="d-flex align-items-center justify-content-center">
             <Button
               altText={"start"}
