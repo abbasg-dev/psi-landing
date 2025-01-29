@@ -1,3 +1,5 @@
+@use "../../styles/abstracts/" as mixins;
+
 button {
   background-color: transparent;
   border-radius: 20px !important;
@@ -9,6 +11,7 @@ button {
   align-items: center;
   position: relative;
   overflow: hidden;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s;
 
   span {
     font-family: "Inter", sans-serif !important;
@@ -23,24 +26,33 @@ button {
 
   img {
     z-index: 2;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #361b70 20%, #2f295e 40%);
-    transition: opacity 0.4s ease;
-    opacity: 0;
-    z-index: 1;
-  }
-
-  &:hover {
-    &::before {
-      opacity: 1;
-    }
+    font-size: 18px;
   }
 }
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    #231557 0%,
+    #502274 50%,
+    #bb47d3 100%
+  );
+  background-size: 200% auto;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+button:hover::before {
+  opacity: 1;
+  animation: textclip 2s linear infinite;
+}
+
+@include mixins.textclip-animation;
