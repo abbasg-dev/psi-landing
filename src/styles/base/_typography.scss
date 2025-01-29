@@ -21,7 +21,7 @@ body {
     position: fixed;
     z-index: 15;
     height: auto;
-    right: 0;
+    right: 5px;
     bottom: 0%;
     cursor: url("/src/assets/images/cursor.svg") 16 16, auto;
     animation: dance 1s ease-in-out infinite;
@@ -29,7 +29,6 @@ body {
 
     &.bot_clicked {
       width: 280px;
-      right: 5px;
       transform: scale(4);
     }
 
