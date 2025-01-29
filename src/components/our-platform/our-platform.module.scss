@@ -38,6 +38,7 @@
       width: 146px;
       height: 146px;
       align-self: self-end;
+      transition: transform 0.3s ease-in-out;
     }
 
     .ellipse1 {
@@ -46,6 +47,14 @@
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
+    }
+
+    &:hover {
+      background-color: #374b60 !important;
+
+      .itemIcon {
+        transform: scale(1.4);
+      }
     }
 
     @include mixins.responsive(md) {
@@ -99,6 +108,7 @@
   right: 0;
   top: 0;
   transform: translateY(-45%);
+  z-index: -1;
 
   @include mixins.responsive(md) {
     transform: translateY(-70%);
@@ -112,6 +122,7 @@
   top: 10%;
   height: 960px;
   transform: translateY(-50%);
+  z-index: -1;
 }
 
 .platform .platformEllipse3 {
@@ -119,4 +130,5 @@
   right: 0;
   height: 960px;
   transform: translateY(-75%);
+  z-index: -1;
 }
