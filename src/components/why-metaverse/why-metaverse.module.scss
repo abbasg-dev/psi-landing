@@ -26,14 +26,19 @@
     }
 
     .vectary {
-      position: absolute;
-      // top: -300px;
-      right: 50px;
+      position: fixed;
+      transform: translateY(10%);
       z-index: 15;
-      width: 280px;
       height: auto;
       bottom: 0;
       cursor: url("/src/assets/images/cursor.svg") 16 16, auto;
+      animation: dance 1s ease-in-out infinite;
+
+      &.botClicked {
+        width: 280px;
+        right: 5px;
+        transform: scale(4);
+      }
 
       @include mixins.responsive(md) {
         display: none;

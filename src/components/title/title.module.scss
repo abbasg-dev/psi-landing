@@ -5,8 +5,6 @@
   display: flex;
   align-items: center;
 
-  @include keyframes.zoom;
-
   .starsContainer {
     position: relative;
     width: 100px;

@@ -61,7 +61,11 @@ const WhyMetaverse = () => {
           <img
             src={assets.vectary}
             alt="vectary"
-            className={styles.vectary}
+            className={
+              showChatBot
+                ? `${styles.vectary} ${styles.botClicked}`
+                : styles.vectary
+            }
             onClick={() => setShowChatBot(true)}
           />
           <div
