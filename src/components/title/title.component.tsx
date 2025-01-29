@@ -1,5 +1,4 @@
 import Stars from "../stars/stars.component";
-import assets from "../../assets";
 import styles from "./title.module.scss";
 
 type titleProps = {
