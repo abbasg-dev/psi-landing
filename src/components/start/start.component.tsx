@@ -1,3 +1,4 @@
+import { useMediaQuery } from "react-responsive";
 import Button from "../button/button.component";
 import Stars from "../stars/stars.component";
 import assets from "../../assets";
@@ -8,11 +9,13 @@ interface StartProps {
 }
 
 const Start: React.FC<StartProps> = ({ onStart }) => {
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   return (
     <div className={styles.start}>
       <div className="container">
         <video src={assets.start} autoPlay loop muted />
         <div className={styles.startContent}>
+          {isMobile && <Stars />}
           <div className={styles.flexContainer}>
             <div className={styles.flexItem}>
               <hr />
@@ -29,9 +32,9 @@ const Start: React.FC<StartProps> = ({ onStart }) => {
           </div>
           <div className={styles.wlcm}>Welcome to Another world</div>
           <div className={styles.company}>
-            <Stars />
+            {!isMobile && <Stars />}
             METAVERSE
-            <Stars />
+            {!isMobile && <Stars />}
           </div>
           <div className="d-flex align-items-center justify-content-center">
             <Button
