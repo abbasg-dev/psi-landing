@@ -52,7 +52,7 @@ button::before {
 
 button:hover::before {
   opacity: 1;
-  animation: textclip 2s linear infinite;
+  animation: textclip 2s linear 1;
 }
 
 @include mixins.textclip-animation;
