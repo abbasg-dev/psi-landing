@@ -1,3 +1,5 @@
+@use "../../styles/abstracts/" as mixins;
+
 .loading {
   position: relative;
   height: 100vh;
@@ -21,14 +23,14 @@
     z-index: 1;
   }
 
-  video {
-    position: absolute;
+  .bckVideo {
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
-    z-index: 0;
+    z-index: -1;
   }
 
   .layerLogo {
@@ -38,19 +40,40 @@
     z-index: 3;
   }
 
-  .middleContent {
+  .container {
     position: relative;
-    z-index: 3;
-    text-align: center;
-    color: #fff;
+    z-index: 2;
 
-    img {
-      width: 150px;
-      height: auto;
-      margin-bottom: 20px;
+    .animatedLetters {
+      position: relative;
+      width: 100px;
+      height: 100px;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+        animation: fadeInOut 1.2s linear infinite;
+      }
+
+      img:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      img:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+
+      img:nth-child(3) {
+        animation-delay: 0.8s;
+      }
     }
 
-    div {
+    .loadingText {
+      color: #fff;
       font-family: "Poppins", sans-serif;
       font-size: 24px;
       font-weight: 400;

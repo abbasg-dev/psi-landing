@@ -1,11 +1,20 @@
 @use "./mixins" as mixins;
 
-@keyframes fadeIn {
-  from {
+@keyframes fadeInOut {
+  0% {
     opacity: 0;
   }
-  to {
+  10% {
     opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
