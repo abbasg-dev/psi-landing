@@ -1,9 +1,13 @@
+import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import { Row, Col } from "react-bootstrap";
 import Title from "../title/title.component";
 import assets from "../../assets";
 import styles from "./journey.module.scss";
 
 const Journey = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+  const [imageSrc, setImageSrc] = useState<string>(assets.lady);
   const steps = [
     {
       description: "Create Your Character: Personalize your virtual avatar",
@@ -35,7 +39,13 @@ const Journey = () => {
             md={12}
             className="align-content-center px-lg-5 px-md-5 px-5"
           >
-            <img src={assets.lady} alt="lady" className="w-100" />
+            <img
+              src={imageSrc}
+              alt="lady"
+              className="w-100"
+              onMouseEnter={() => setImageSrc(assets.employee)}
+              onMouseLeave={() => setImageSrc(assets.lady)}
+            />
           </Col>
           <Col lg={8} md={12} className="px-lg-5 px-md-0 px-0">
             {steps?.map((item, index) => {
@@ -63,17 +73,40 @@ const Journey = () => {
           </Col>
         </div>
       </div>
-      <img
-        src={assets.ellipse19}
-        className={styles.journeyLeftEllipse}
-        alt="journey-left-ellipse"
-      />
+      {isMobile && (
+        <>
+          <img
+            src={assets.mbJourneyEllipse}
+            className={styles.mbJourneyEllipse}
+            alt="mb-journey-ellipse"
+          />
+          <img
+            src={assets.jREllipse}
+            className={styles.mbLeftEllipse}
+            alt="mb-left-ellipse"
+          />
+          <img
+            src={assets.platformEllipse2}
+            className={styles.mbBottomEllipse}
+            alt="mb-bottom-ellipse"
+          />
+        </>
+      )}
+      {!isMobile && (
+        <>
+          <img
+            src={assets.ellipse19}
+            className={styles.journeyLeftEllipse}
+            alt="journey-left-ellipse"
+          />
+          <img
+            src={assets.jREllipse}
+            className={styles.rightEllipse}
+            alt="right-ellipse"
+          />
+        </>
+      )}
       <img src={assets.property} className={styles.property} alt="property" />
-      <img
-        src={assets.jREllipse}
-        className={styles.journeyRightEllipse}
-        alt="journey-right-ellipse"
-      />
     </section>
   );
 };

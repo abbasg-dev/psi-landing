@@ -63,50 +63,56 @@
     }
   }
 
+  .journeyLeftEllipse {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .mbJourneyEllipse {
+    position: absolute;
+    top: 6%;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+  }
+
+  .mbBottomEllipse {
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+  }
+
+  .property {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(25%);
+
+    @include mixins.responsive(md) {
+      transform: unset;
+      top: unset;
+      bottom: 7%;
+    }
+  }
+
+  .mbLeftEllipse {
+    position: absolute;
+    top: 2%;
+    left: -6%;
+    width: 128px;
+  }
+
+  .rightEllipse {
+    position: absolute;
+    right: 0;
+    top: 63%;
+    transform: translateX(50%);
+    width: 381px;
+    z-index: 1;
+  }
+
   @include mixins.responsive(md) {
     padding: 50px 0;
-  }
-}
-
-.journey .journeyLeftEllipse {
-  position: absolute;
-  left: 0;
-  height: 928px;
-  transform: translateY(-85%) rotate(0);
-  z-index: 1;
-
-  @include mixins.responsive(md) {
-    transform: unset;
-    top: 10%;
-  }
-}
-
-.journey .property {
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: translateY(25%);
-
-  @include mixins.responsive(md) {
-    transform: unset;
-    top: unset;
-    bottom: 7%;
-  }
-}
-
-.journey .journeyRightEllipse {
-  position: absolute;
-  height: 381px;
-  right: 0;
-  top: 63%;
-  transform: translateX(50%);
-
-  @include mixins.responsive(md) {
-    width: 128px;
-    top: 2%;
-    left: 0;
-    right: unset;
-    transform: unset;
-    height: unset;
   }
 }

@@ -79,6 +79,9 @@ import heroRightEllipse from "./images/hero-r-ellipse.svg";
 import pLetter from "./images/p-letter.svg";
 import sLetter from "./images/s-letter.svg";
 import iLetter from "./images/i-letter.svg";
+import employee from "./images/employee.svg";
+import mbJourneyEllipse from "./images/mb-journey-ellipse.svg";
+import jrMbEllipse from "./images/jr-mb-ellipse.svg";
 
 const assets = {
   layer,
@@ -162,6 +165,9 @@ const assets = {
   pLetter,
   sLetter,
   iLetter,
+  employee,
+  mbJourneyEllipse,
+  jrMbEllipse,
 };
 
 export default assets;
