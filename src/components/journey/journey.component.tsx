@@ -35,7 +35,7 @@ const Journey = () => {
             md={12}
             className="align-content-center px-lg-5 px-md-5 px-5"
           >
-            <img src={assets.lady} alt="lady" />
+            <img src={assets.lady} alt="lady" className="w-100" />
           </Col>
           <Col lg={8} md={12} className="px-lg-5 px-md-0 px-0">
             {steps?.map((item, index) => {
