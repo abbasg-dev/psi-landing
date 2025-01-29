@@ -1,5 +1,5 @@
 import layer from "./images/Layer_1.svg";
-import logo from "./images/psi hologaphic 1.png";
+import logo from "./images/psi hologaphic.png";
 import hero from "./videos/hero.mp4";
 import placholder from "./images/Placeholder.svg";
 import coronaLeft from "./images/corona-left.svg";
