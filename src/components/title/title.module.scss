@@ -1,12 +1,45 @@
 @use "../../styles/abstracts/" as mixins;
+@use "../../styles/abstracts/" as keyframes;
 
 .title {
   display: flex;
   align-items: center;
 
-  img {
-    width: 150px;
-    height: auto;
+  @include keyframes.zoom;
+
+  .starsContainer {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+
+    .star {
+      position: absolute;
+      opacity: 0.8;
+      animation: zoom 0.5s infinite;
+
+      &:nth-child(1) {
+        top: 50%;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        top: 25%;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        animation-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        bottom: 70%;
+        right: 30px;
+        width: 20px;
+        height: 20px;
+        animation-delay: 0.2s;
+      }
+    }
   }
 
   p {
@@ -26,14 +59,13 @@
     text-align: center;
     padding: 0 20px;
 
-    img {
-      width: 100px;
+    &:nth-child(1) {
+      margin: 0 auto;
     }
 
     p {
       font-size: 24px;
       width: unset;
-      place-self: center;
     }
   }
 }

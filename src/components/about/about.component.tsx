@@ -34,7 +34,7 @@ const About = () => {
               <img src={assets.aboutBanner} alt="banner" />
             </Col>
           </Row>
-          <div className="d-flex justify-content-center align-items-center">
+          <div className="d-flex justify-content-center my-0 mx-auto">
             <Button
               imgSrc={assets.placholder}
               altText={"placholder"}

@@ -4,7 +4,7 @@ import hero from "./videos/hero.mp4";
 import placholder from "./images/Placeholder.svg";
 import coronaLeft from "./images/corona-left.svg";
 import coronaRight from "./images/corona-right.svg";
-import star from "./images/star.svg";
+import star from "./images/star-1.svg";
 import vectary from "./images/Vectary.svg";
 import ellipse from "./images/Ellipse 12.svg";
 import ellipseLeft from "./images/Ellipse 13.svg";
