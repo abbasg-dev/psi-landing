@@ -154,11 +154,13 @@ const Hero = () => {
             </div>
           )}
         </div>
-        <img
-          src={assets.heroRightEllipse}
-          alt="hero-right-ellipse"
-          className={styles.heroRightEllipse}
-        />
+        {!isMobile && (
+          <img
+            src={assets.heroRightEllipse}
+            alt="hero-right-ellipse"
+            className={styles.heroRightEllipse}
+          />
+        )}
         {isMobile && isToggleOpen && (
           <>
             <img
