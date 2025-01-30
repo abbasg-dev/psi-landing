@@ -82,6 +82,8 @@ import iLetter from "./images/i-letter.svg";
 import employee from "./images/employee.svg";
 import mbJourneyEllipse from "./images/mb-journey-ellipse.svg";
 import jrMbEllipse from "./images/jr-mb-ellipse.svg";
+import threedBack from "./images/three-d-back.svg";
+import threedFront from "./images/three-d-front.svg";
 
 const assets = {
   layer,
@@ -168,6 +170,8 @@ const assets = {
   employee,
   mbJourneyEllipse,
   jrMbEllipse,
+  threedBack,
+  threedFront,
 };
 
 export default assets;

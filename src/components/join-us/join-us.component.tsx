@@ -135,27 +135,15 @@ const JoinUs = () => {
               </FormProvider>
             </Col>
             {!isMobile && (
-              <Col
-                lg={6}
-                md={12}
-                className="text-center px-lg-5 px-md-0 px-0 py-0"
-              >
-                <img
-                  src={assets.blendLogo}
-                  alt="blend-logo"
-                  style={{ width: "100%" }}
-                />
+              <Col lg={6} md={12} className="px-lg-5 px-md-0 px-0 py-5">
+                <div className={styles.join3d}></div>
               </Col>
             )}
           </div>
         </div>
         {isMobile && (
-          <Col lg={6} md={12} className="text-center px-lg-5 px-md-0 px-0 py-0">
-            <img
-              src={assets.blendLogo}
-              alt="blend-logo"
-              style={{ width: "100%" }}
-            />
+          <Col lg={6} md={12} className="px-lg-5 px-md-0 px-0 py-0">
+            <div className={styles.join3d}></div>
           </Col>
         )}
       </div>
