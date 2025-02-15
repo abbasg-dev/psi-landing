@@ -4,6 +4,7 @@ import { Navbar, Nav, Row, Col } from "react-bootstrap";
 import assets from "../../assets";
 import Button from "../button/button.component";
 import ChatBotModal from "../chat-bot/chat-bot.component";
+import Video from "../video/video.component";
 import { useActiveLink } from "../../context/ActiveLinkContext";
 import { useToggle } from "../../context/ToggleContext";
 import styles from "./hero-section.module.scss";
@@ -86,7 +87,7 @@ const Hero = () => {
           </Navbar>
           {!isToggleOpen && (
             <>
-              <video src={assets.hero} autoPlay loop muted />
+              <Video video={"q7iopmpxvfrocskv1fez"} />
               <Row className={styles.ordered}>
                 <Col lg={6} md={12} className={"px-lg-2 px-md-0 px-0"}>
                   <div className={styles.letsTry}>

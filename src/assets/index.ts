@@ -1,6 +1,5 @@
 import layer from "./images/Layer_1.svg";
 import logo from "./images/psi hologaphic.png";
-import hero from "./videos/hero.mp4";
 import placholder from "./images/Placeholder.svg";
 import coronaLeft from "./images/corona-left.svg";
 import coronaRight from "./images/corona-right.svg";
@@ -52,10 +51,8 @@ import instagram from "./images/Instagram.svg";
 import twitter from "./images/Twitter.svg";
 import vimeo from "./images/Vimeo.svg";
 import youtube from "./images/youtube-black.svg";
-import start from "./videos/start.mp4";
 import startEllipse from "./images/start-ellipse.svg";
 import animatedLogo from "./images/logo-animated.svg";
-import loading from "./videos/loading.mp4";
 import lap from "./images/lap.png";
 import userProfile from "./images/user-profile.jpeg";
 import botProfile from "./images/psi-profile.jpeg";
@@ -89,7 +86,6 @@ const assets = {
   layer,
   logo,
   placholder,
-  hero,
   coronaLeft,
   coronaRight,
   star,
@@ -140,10 +136,8 @@ const assets = {
   twitter,
   vimeo,
   youtube,
-  start,
   startEllipse,
   animatedLogo,
-  loading,
   lap,
   userProfile,
   botProfile,

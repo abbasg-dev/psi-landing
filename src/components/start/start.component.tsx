@@ -1,6 +1,7 @@
 import { useMediaQuery } from "react-responsive";
 import Button from "../button/button.component";
 import Stars from "../stars/stars.component";
+import Video from "../video/video.component";
 import assets from "../../assets";
 import styles from "./start.module.scss";
 
@@ -13,7 +14,7 @@ const Start: React.FC<StartProps> = ({ onStart }) => {
   return (
     <div className={styles.start}>
       <div className="container">
-        <video src={assets.start} autoPlay loop muted />
+        <Video video={"rtbvjxvj79xggqijbofg"} />
         <div className={styles.startContent}>
           {isMobile && <Stars />}
           <div className={styles.flexContainer}>
