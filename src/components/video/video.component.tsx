@@ -15,7 +15,12 @@ interface VideoProps {
 
 const Video = (props: VideoProps) => {
   const { video } = props;
-  return <AdvancedVideo cldVid={cld.video(`psi/${video}`).quality("auto")} />;
+  return (
+    <AdvancedVideo
+      cldVid={cld.video(`psi/${video}`).quality("auto")}
+      onError={() => console.error("Video failed to load")}
+    />
+  );
 };
 
 export default Video;

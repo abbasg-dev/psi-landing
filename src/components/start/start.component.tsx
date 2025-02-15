@@ -23,8 +23,18 @@ const Start: React.FC<StartProps> = ({ onStart }) => {
             </div>
             <div className={styles.flexItemCenter}>
               <div className={"flex-center"}>
-                <img src={assets.poweredBy} alt="powered-by" />
-                <img src={assets.psiLogo} alt="blend-logo" />
+                <img
+                  src={assets.poweredBy}
+                  width="74"
+                  height="64"
+                  alt="powered-by"
+                />
+                <img
+                  src={assets.psiLogo}
+                  width="99"
+                  height="92"
+                  alt="blend-logo"
+                />
               </div>
             </div>
             <div className={styles.flexItem}>
